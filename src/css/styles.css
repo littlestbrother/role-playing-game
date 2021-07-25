@@ -22,6 +22,10 @@ input{
     font-size: 87.5%;
 }
 
+label{    color: #DA0037;
+    font-family: monospace;
+    font-size: 87.5%;}
+
 pre{
     line-height: 1.1;
 }
