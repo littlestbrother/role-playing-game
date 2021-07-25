@@ -9,7 +9,11 @@
 </head>
 
 <body>
-  <pre>
+  <!-- serve user game output -->
+  <div id="console" class="container">
+    <pre id="result">
+Welcome To:
+
  ▄▄▄██▀▀▀▓█████   ██████ ▄▄▄█████▓ ▒█████   ██▓███   ▒█████   ██▓     ██▓  ██████ 
    ▒██   ▓█   ▀ ▒██    ▒ ▓  ██▒ ▓▒▒██▒  ██▒▓██░  ██▒▒██▒  ██▒▓██▒    ▓██▒▒██    ▒ 
    ░██   ▒███   ░ ▓██▄   ▒ ▓██░ ▒░▒██░  ██▒▓██░ ██▓▒▒██░  ██▒▒██░    ▒██▒░ ▓██▄   
@@ -19,8 +23,28 @@
  ▒ ░▒░    ░ ░  ░░ ░▒  ░ ░    ░      ░ ▒ ▒░ ░▒ ░       ░ ▒ ▒░ ░ ░ ▒  ░ ▒ ░░ ░▒  ░ ░
  ░ ░ ░      ░   ░  ░  ░    ░      ░ ░ ░ ▒  ░░       ░ ░ ░ ▒    ░ ░    ▒ ░░  ░  ░  
  ░   ░      ░  ░      ░               ░ ░               ░ ░      ░  ░ ░        ░  
+
+ Please type your name:
 </pre>
+
+    <!-- user input box -->
+    <form>
+      <!-- textbox -->
+      <div id="textbox">
+        <label>></label>
+        <input type="text" placeholder="_" id="interact" autocomplete="off">
+      </div>
+
+          <!-- other form submissions -->
+          <div id="other">
+          </div>
+    </form>
+  </div>
+
+  <!-- serve inventory box -->
+  <div class="container" id="inventory">
+    <pre>name: null, intelligence: null, strength: null, magic: null, level: null, hp: null</pre>
+  </div>
 </body>
 
 </html>
-
