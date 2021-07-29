@@ -1,32 +1,16 @@
-export let RockPaperScissors = {moves,enemyTurn,playerTurn,choose,contest}
+// 0 = rock, 1 = paper, 2 = scissor
 
-let moves = ['rock', 'paper', 'scissor'];
+// let enemyTurn = moves[random()];
+// let playerTurn = moves[choose(choice)];
 
-let enemyTurn = moves[random()];
-let playerTurn = moves[choose()];
-
-function choose() {
-    if (playerTurn == 'rock') {
-        return 0
-    }
-    else if (playerTurn == 'paper') {
-        return 1
-    }
-    else if (playerTurn == 'scissor') {
-        return 2
-    } else {
-        return 'Invalid Choice'; 
-    }
-}
-
-function contest() {
-    if ((playerTurn == 'rock' && enemyTurn == 'paper') || (playerTurn === 'scissor' && enemyTurn === 'rock') || (playerTurn === 'paper' && enemyTurn === 'scissor')){
+export default function contest(playerTurn, enemyTurn) {
+    if ((playerTurn == 0 && enemyTurn == 1) || (playerTurn === 2 && enemyTurn === 0) || (playerTurn === 1 && enemyTurn === 2)){
         return false//false means player loses
     }
-    else if ((playerTurn === 'paper' && enemyTurn === 'rock') || (playerTurn === 'rock' && enemyTurn === 'scissor') || (playerTurn === 'scissor' && enemyTurn === 'paper')) {
+    else if ((playerTurn === 1 && enemyTurn === 0) || (playerTurn === 0 && enemyTurn === 2) || (playerTurn === 2 && enemyTurn === 1)) {
         return true //player wins
     }
-    else if ((playerTurn === 'paper' && enemyTurn === 'paper') || (playerTurn === 'rock' && enemyTurn === 'rock') || (playerTurn === 'scissor' && enemyTurn === 'scissor')) {
+    else if ((playerTurn === 1 && enemyTurn === 1) || (playerTurn === 0 && enemyTurn === 0) || (playerTurn === 2 && enemyTurn === 2)) {
         choose(); //player chooses again
     } 
     else {
