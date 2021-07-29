@@ -1,4 +1,5 @@
-import contest from '../src/rps.js'
+import contest from '../src/battle.js'
+
 
 describe('rock paper scissors', () => {
     test('should test if choose routes return properly', () => {

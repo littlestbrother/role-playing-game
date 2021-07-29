@@ -1,5 +1,5 @@
 import { TestScheduler } from 'jest';
-import { Wizard, Player, Samurai, VinDiesel, Ninja, Warrior } from './../src/rpg.js';
+import { Wizard, Player, Samurai, VinDiesel, Ninja, Warrior, Enemy } from './../src/rpg.js';
 
 describe('Wizard', () => {
     test('should create Wizard class', () => {
@@ -77,4 +77,25 @@ describe('Wizard', () => {
   });
 
 
+  describe('Enemy', () => {
+    test('should create Enemy class', () => {
+        let enemy = new Enemy(2,3,1,40);
+        expect(enemy.intelligence).toEqual(4);
+        expect(enemy.strength).toEqual(6);
+        expect(enemy.level).toEqual(1);
+        expect(enemy.hp).toEqual(80);
+    });
+  });
+
+});
+
+describe('Enemy level up', () => {
+  test('should level up Enemy class', () => {
+      let enemy = new Enemy(2,3,1,40);
+      enemy.levelUp();
+      expect(enemy.intelligence).toEqual(5);
+      expect(enemy.strength).toEqual(7);
+      expect(enemy.level).toEqual(2);
+      expect(enemy.hp).toEqual(81);
+  });
 });

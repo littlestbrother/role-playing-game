@@ -59,6 +59,23 @@ export class Warrior extends Player {
 
 }
 
+
+export class Enemy {
+    constructor(intelligence, strength, level, hp) {
+        this.intelligence = intelligence * 2;
+        this.strength = strength * 2;
+        this.hp = hp * 2;
+        this.level = level;
+    }
+
+    levelUp(){
+        this.intelligence += 1;
+        this.strength += 1;
+        this.level += 1;
+        this.hp += 1;
+    }
+}
+
 //for player:
 //whoever has the highest intelligence score goes first
 //your strength minus enemies hp if you win rock paper scissors
