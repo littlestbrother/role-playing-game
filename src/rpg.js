@@ -11,7 +11,7 @@ export class Player {
 
     //method to levelUp()
     levelUp() {
-        this.intelligence +=1;
+        this.intelligence += 1;
         this.strength += 1;
         this.magic += 1;
         this.level += 1;
@@ -22,7 +22,7 @@ export class Player {
 //create Wizard object
 export class Wizard extends Player {
     constructor(name, intelligence, strength, magic, level, hp) {
-        super(name,10,2,10,1,90);
+        super(name, 10, 2, 10, 1, 90);
     }
 
 }
@@ -30,7 +30,7 @@ export class Wizard extends Player {
 //create Samurai object
 export class Samurai extends Player {
     constructor(name, intelligence, strength, magic, level, hp) {
-        super(name,10,10,0,1,100);
+        super(name, 10, 10, 0, 1, 100);
     }
 
 }
@@ -38,7 +38,7 @@ export class Samurai extends Player {
 //create Ninja object
 export class Ninja extends Player {
     constructor(name, intelligence, strength, magic, level, hp) {
-        super(name,10,3,2,1,90);
+        super(name, 10, 3, 2, 1, 90);
     }
 
 }
@@ -46,7 +46,7 @@ export class Ninja extends Player {
 //create VinDiesel object
 export class VinDiesel extends Player {
     constructor(name, intelligence, strength, magic, level, hp) {
-        super(name,20,20,20,20,200);
+        super(name, 20, 20, 20, 20, 200);
     }
 
 }
@@ -54,7 +54,18 @@ export class VinDiesel extends Player {
 //create Warrior object
 export class Warrior extends Player {
     constructor(name, intelligence, strength, magic, level, hp) {
-        super(name,5,5,0,1,90);
+        super(name, 5, 5, 0, 1, 90);
     }
 
 }
+
+//for player:
+//whoever has the highest intelligence score goes first
+//your strength minus enemies hp if you win rock paper scissors
+//hp + magic, uses
+
+//enemy:
+//level * strength - hp 
+
+//additional:
+//random chance you get a crit-
